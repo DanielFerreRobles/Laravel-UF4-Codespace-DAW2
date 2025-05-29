@@ -9,4 +9,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('players', FutbolistaController::class);
+Route::resource('/futbolistas', FutbolistaController::class);

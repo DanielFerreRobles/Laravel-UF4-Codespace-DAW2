@@ -10,12 +10,12 @@ class FutbolistaController extends Controller
     public function index()
     {
         $futbolistas = Futbolista::all();
-        return view('players.index', compact('futbolistas'));
+        return view('futbolistas.index', compact('futbolistas'));
     }
 
     public function create()
     {
-        return view('players.create');
+        return view('futbolistas.create');
     }
 
     public function store(Request $request)
@@ -28,7 +28,7 @@ class FutbolistaController extends Controller
 
         Futbolista::create($request->all());
 
-return redirect()->route('players.index')->with('success', '¡Futbolista creado correctamente!');
+        return redirect()->route('futbolistas.index')->with('success', '¡Futbolista creado correctamente!');
     }
 
     public function show(Futbolista $futbolista)
@@ -38,7 +38,7 @@ return redirect()->route('players.index')->with('success', '¡Futbolista creado 
 
     public function edit(Futbolista $futbolista)
     {
-        return view('players.edit', compact('futbolista'));
+        return view('futbolistas.edit', compact('futbolista'));
     }
 
     public function update(Request $request, Futbolista $futbolista)
@@ -51,12 +51,12 @@ return redirect()->route('players.index')->with('success', '¡Futbolista creado 
 
         $futbolista->update($request->all());
 
-        return redirect()->route('players.index')->with('success', '¡Futbolista actualizado correctamente!');
+        return redirect()->route('futbolistas.index')->with('success', '¡Futbolista actualizado correctamente!');
     }
 
     public function destroy(Futbolista $futbolista)
     {
         $futbolista->delete();
-        return redirect()->route('players.index')->with('success', '¡Futbolista eliminado correctamente!');
+        return redirect()->route('futbolistas.index')->with('success', '¡Futbolista eliminado correctamente!');
     }
 }

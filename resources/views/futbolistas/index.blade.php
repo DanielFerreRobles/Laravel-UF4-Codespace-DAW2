@@ -1,4 +1,4 @@
-@extends('layaouts.app')
+@extends('layouts.app')
 
 @section('content')
     <h1 class="mb-3">Llistat de futbolistes</h1>
@@ -23,9 +23,9 @@
                     <td>{{ $futbolista->edad }}</td>
                     <td>{{ $futbolista->equipo }}</td>
                     <td>
-                        <a href="{{ route('players.edit', $futbolista) }}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="{{ route('futbolistas.edit', $futbolista) }}" class="btn btn-warning btn-sm">Editar</a>
 
-                        <form action="{{ route('players.destroy', $futbolista) }}" method="POST" class="d-inline" onsubmit="return confirm('Segur que vols eliminar aquest futbolista?')">
+                        <form action="{{ route('futbolistas.destroy', $futbolista) }}" method="POST" class="d-inline" onsubmit="return confirm('Segur que vols eliminar aquest futbolista?')">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm">Eliminar</button>

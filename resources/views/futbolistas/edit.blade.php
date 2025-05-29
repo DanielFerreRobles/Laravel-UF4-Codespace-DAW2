@@ -1,4 +1,4 @@
-@extends('layaouts.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -6,7 +6,7 @@
     <form action="{{ route('futbolistas.update', $futbolista) }}" method="POST">
         @csrf
         @method('PUT')
-        @include('form') {{-- ✅ Correcto sin .blade.php --}}
+        @include('futbolistas.form')
         <button type="submit" class="btn btn-primary">Actualitza</button>
     </form>
 </div>
