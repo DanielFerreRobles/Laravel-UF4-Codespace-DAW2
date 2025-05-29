@@ -9,8 +9,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('futbolistas.index') }}">Futbolistes</a>
-            <a class="btn btn-primary" href="{{ route('futbolistas.create') }}">Afegir futbolista</a>
+            <a class="navbar-brand" href="{{ route('players.index') }}">Futbolistes</a>
+            <a class="btn btn-primary" href="{{ route('players.create') }}">Afegir futbolista</a>
         </div>
     </nav>
 

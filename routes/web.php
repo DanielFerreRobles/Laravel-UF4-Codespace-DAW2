@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\FutbolistaController;
 
 
 Route::get('/', function () {
@@ -9,8 +9,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/inicio', function () {
-    return view('inicio');
-});
-
-Route::resource('futbolistas', FutbolistaController::class);
+Route::resource('players', FutbolistaController::class);

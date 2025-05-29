@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Futbolista extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nombre',
+        'edad',
+        'equipo',
+    ];
+
 }
